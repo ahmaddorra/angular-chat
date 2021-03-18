@@ -1,0 +1,83 @@
+
+nav h5{
+  display: block;
+  margin: auto;
+}
+nav .rounded-image{
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #E1E5E8;
+}
+nav .fa-less-than{
+  vertical-align: bottom;
+  color: #979B9E;
+}
+nav .fa-circle{
+  font-size: .8rem;
+  right: 1.35rem;
+  position: absolute;
+  color:#52AE57;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #E1E5E8;
+}
+
+
+.messages-container{
+  width: -webkit-fill-available;
+  box-sizing: content-box;
+  position: absolute;
+  bottom: 40px;
+
+}
+.messages-container > div{
+  overflow: scroll;
+  height: 90vh;
+  max-height: calc(100vh - 150px) !important;
+}
+.messages-container .rounded-top{
+  border-radius: 2em 2em 0 0 !important;
+}
+
+.message{
+  display: inline-block;
+  padding: 7px;
+  color: black;
+  width:fit-content;
+  min-width: 25%;
+  max-width: 45%;
+}
+.message.received{
+  background:#F4C242;
+  border-radius: 0 2rem 2rem 2rem;
+}
+.message.sent{
+  background:#F1F2F3;
+  border-radius: 2rem 0 2rem 2rem;
+}
+time{
+  font-size: 12px;
+}
+.input-message-container{
+  height: 50px;
+  border: 1px solid grey;
+  border-radius: 1.8rem 1.8rem 0 0;
+}
+#input-message{
+  height: 50px;
+  padding: 5px;
+  border: none;
+  width: 100%;
+  border-radius: 1.8rem 1.8rem 0 0;
+}
+#msg_send_btn{
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  position: absolute;
+  right: 2rem;
+  top: 8px;
+}
+#msg_send_btn .fa-arrow-circle-right{
+  font-size: 30px;
+  color:#53B156;
+}

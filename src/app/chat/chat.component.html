@@ -1,0 +1,49 @@
+<div class="nav-scroller bg-light">
+  <nav class="nav nav-underline" aria-label="Navigation">
+    <a class="nav-link " href="#"><i class="fas fa-less-than"></i></a>
+    <h5 *ngIf="recipient"> {{recipient.name}} </h5>
+    <a class="nav-link" href="#">
+      <img class="rounded-image me-2" width="42" height="42" src="a.jpg" alt=""/>
+      <i class="fas fa-circle"></i>
+    </a>
+  </nav>
+</div>
+
+<main>
+  <div class="messages-container">
+    <div class="mt-3 p-3 bg-body rounded-top shadow-sm" #appendElm>
+
+      <ng-template ngFor let-message [ngForOf]="messages" >
+        <div *ngIf="message.from_id == recipient.id" class="row text-start mt-2">
+          <div class="col-12">
+            <div class="message received">
+              <p>{{message.text}}</p>
+            </div>
+            <time>08:59</time>
+          </div>
+        </div>
+
+        <div *ngIf="message.from_id == user.id" class="row text-end mt-2">
+          <div class="col-12 ">
+            <div class="message sent float-right">
+              <p>{{message.text}}</p>
+            </div>
+            <time class="float-right">08:59</time>
+          </div>
+        </div>
+
+      </ng-template>
+
+    </div>
+  </div>
+</main>
+
+<div class="fixed-bottom input-message-container">
+  <form [formGroup]="form" (submit)="submit()" id="sendForm">
+    <input type="text" formControlName="inputmessage" id="input-message" name="inputmessage" class="write_msg" placeholder="Type your message here"/>
+    <button id="msg_send_btn" type="submit"><i class="fas fa-arrow-circle-right"></i></button>
+  </form>
+</div>
+
+
+

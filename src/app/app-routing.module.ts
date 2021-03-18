@@ -4,6 +4,7 @@ import {PublicComponent} from './public/public.component';
 import {SecureComponent} from './secure/secure.component';
 import {HomeComponent} from './public/home/home.component';
 import {LoginComponent} from './public/login/login.component';
+import {ChatComponent} from './chat/chat.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
       {path: 'login', component: LoginComponent}
     ]
   },
-  {path: 'secure', component: SecureComponent}
+  {path: 'secure', component: SecureComponent},
+  {path: 'chat/:id', component: ChatComponent}
 ];
 
 @NgModule({

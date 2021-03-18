@@ -1,1 +1,24 @@
-<p>secure works!</p>
+<p *ngIf="user">
+  Hi {{user.name}},
+</p>
+<div class="messages-container">
+  <div class="mt-3 p-3 bg-body rounded-top shadow-sm">
+    <div class="messages-header text-center">
+      <h6 class="pb-2 mb-0">Messages</h6> <div class="number">1</div>
+    </div>
+<ng-template ngFor let-contact [ngForOf]="contacts" let-i="index">
+      <a routerLink="/chat/{{contact.id}}">
+        <div class="d-flex text-muted pt-3 message">
+          <img class="rounded-image me-2" width="42" height="42" src="a.jpg" alt=""/>
+          <i class="fas fa-circle"></i>
+          <div class="pb-3 mb-0 small lh-sm w-100">
+            <div class="d-flex justify-content-between">
+              <strong class="text-gray-dark">{{contact.name}}</strong>
+            </div>
+            <span class="d-block">{{contact.email}}</span>
+          </div>
+        </div>
+      </a>
+</ng-template>
+</div>
+</div>
